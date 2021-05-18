@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT
+web: waitress-serve --port=$PORT personalcv.wsgi:application
