@@ -71,7 +71,9 @@ TEMPLATES = [
     },
 ]
 
+# WSGI_APPLICATION = 'personalcv.wsgi.application'
 WSGI_APPLICATION = 'personalcv.wsgi.application'
+
 
 
 # Database
@@ -130,9 +132,10 @@ if DEBUG:
 else:
    STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,'media_cdn')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

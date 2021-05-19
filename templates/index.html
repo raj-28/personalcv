@@ -5,7 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>RK</title>
+    <link rel="icon" href="{% static 'fevicon.ico' %}" sizes="32*32" />
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -21,7 +23,7 @@
     </div>
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
+            <div class="logo"><a href="#"><span><img src="{% static 'images/logo.png' %}" width="40px" alt="">RK.</span>Patel</a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
@@ -41,8 +43,8 @@
       <div class="max-width">
           <div class="row">
             <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Raj Patel</div>
+                <div class="text-1">Hello, I am</div>
+                <div class="text-2"><em>Raj Patel</em></div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
                 <a href="#">Hire me</a>
             </div>
@@ -60,8 +62,14 @@
                 </div>
                 <div class="column right">
                     <div class="text">I'm Raj and I'm a <span class="typing-2"></span></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.</p>
-                    <a href="#">Download CV</a>
+                    <p>Strongly focused with the ability to complete tasks accurately in a fast-paced environment with conflicting deadlines.
+                    My biggest motivation? Just to keep challenging myself. I see life almost like one long University education that I never had — every day I’m learning something new<br>Breaking rules isn't bad when what you're doing is more important than the rule itself
+<br><i>I am free, no matter what rules surround me. If I find them tolerable, I tolerate them; if I find them too obnoxious, I break them.</i>
+</p>
+                    {% for post in file %}
+                    <a href="{{ post.resumeupload.url }}" download="{{ post.resumeupload.url }}">Download CV</a>
+                    {% endfor %}
+
                 </div>
             </div>
         </div>
@@ -74,6 +82,13 @@
             <div class="serv-content">
                 <div class="card">
                     <div class="box">
+                        <i class="fab fa-uncharted"></i>
+                        <div class="text">Web Development</div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
                         <i class="fas fa-paint-brush"></i>
                         <div class="text">Web Design</div>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
@@ -82,15 +97,8 @@
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-chart-line"></i>
-                        <div class="text">Advertising</div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Apps Design</div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
+                        <div class="text">Web<br>Maintenance &<br>consultancy</div>
+                        <p></p>
                     </div>
                 </div>
                </div>
@@ -146,10 +154,10 @@
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>MySQL</span>
-                            <span>70%</span>
+                            <span>React (Learning)</span>
+                            <span>50%</span>
                         </div>
-                        <div class="line mysql"></div>
+                        <div class="line react"></div>
                     </div>
                 </div>
             </div>
