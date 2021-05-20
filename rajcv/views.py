@@ -1,4 +1,3 @@
-import requests
 from django.shortcuts import render
 from .models import FilesAdmin, Contactform
 import os
