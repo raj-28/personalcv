@@ -8,3 +8,11 @@ class FilesAdmin(models.Model):
     def __str__(self):
         return self.title
 
+class Contactform(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    subject = models.CharField(max_length=200)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.name
