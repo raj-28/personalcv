@@ -9,7 +9,7 @@ def index(request):
     if request.method=="POST":
         contact = Contactform()
         name = request.POST.get('name')
-        email = requests.POST.get('email')
+        email = request.POST.get('email')
         subject = request.POST.get('subject')
         text = request.POST.get('text')
         contact.name = name
@@ -30,3 +30,6 @@ def download(request,path):
 
     raise Http404
 
+
+def work(request):
+    return render(request,'inner-page.html')
